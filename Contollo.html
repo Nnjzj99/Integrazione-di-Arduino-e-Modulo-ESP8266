@@ -1,0 +1,54 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<!--L’attributo predefinito “xmlns” serve per introdurre i prefissi usati dai namespace del documento. Il valore dell’attributo è un URI
+ che non ha nessun valore dichiarativo, ma solo informativo-->
+ 
+	<title>Interfaccia</title>
+	
+    <!-- richiamo i due file JavaScript -->
+	<script src="jquery.js"></script>
+	<script src="myscript.js"></script>
+
+<body>
+
+	<div id="main">
+	
+		<div id="video_and_audio" style="position: absolute; top: 0px; left:60px; width:50%">
+		
+			<form name="myform" action="" method="GET">
+				<center>
+				<h4>inserire IP indicato sulla Webcam:</h4>
+                <br>    
+				<input type="text" name="inputbox" value="192.168.43.243">
+				<input type="button" name="button1" value="TEST" onClick="readUrlAV(this.form)"> <!-- quando si rilascerà il pulsante si scatenerà l'evento -->
+                </center>
+                <br>
+			</form>
+            
+
+			<object id="video" type="text/html" data="http://192.168.43.243:8080/video" 
+				style="position: absolute; width:140%; height:450px;">
+			</object>
+			
+			<object id="audio" type="text/html" data="http://192.168.43.243:8080/audio.opus"
+				style="position: static;">
+            </object>
+			
+		</div>
+		
+		<div id="commands" style="position: absolute; top: 180px; left: 70%; width:30%">
+	
+			<form name="myform2" action="" method="GET">
+			<center>
+				<h4>inserire IP riferito al modulo:</h4>
+				<input type="text" name="inputbox" Value="192.168.43.204">
+				<input type="button" name="button3" Value="TEST" onClick="testarArduino(this.form)"> <!-- quando si rilascerà il pulsante si scatenerà l'evento -->
+			</form>
+			<img src="Freccie.jpg" style="margin-left:30px; margin-top:30px; width:40%; height:190px">
+            <br>
+			<h4>Premere i tasti direzionali presenti sulla tastiera per<br><br> muovere il progetto </h4>
+			</center>
+	
+		</div>
+</body>
+</html>
